@@ -25,6 +25,7 @@ makeCacheMatrix <- function (matx = matrix()) {
 # Default declaration to present all methods
   # I did not understand very well this declaration, but if I did not put it, i got an error:
   # "Error in x$getinverse : object of type 'closure' is not subsettable", which could not resolve in another way
+  # Found this declaration in the example provided in the Assignment description
   
   list(set = set, get = get,
        setinverse = setinverse,
@@ -47,5 +48,5 @@ cacheSolve <- function(x, ...) {
   invmat <- solve(data, ...)
   x$setinverse(invmat)
   
-  invmat    
+  invmat
 }
